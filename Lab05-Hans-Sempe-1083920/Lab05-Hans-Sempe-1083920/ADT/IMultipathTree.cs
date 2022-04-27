@@ -19,4 +19,19 @@ namespace Lab05_Hans_Sempe_1083920.ADT
 
     }
 
+    public class MultiPathTree<K, V>
+    {
+        public K LLave { get; set; }
+
+        public V Valor { get; set; }
+
+        public TreeNode<K, V> origen;
+
+        public MultiPathTree()
+        {
+            this.origen = null; 
+        }
+
+    }
+
 }
