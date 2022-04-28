@@ -1,0 +1,45 @@
+﻿@model Lab05_Hans_Sempe_1083920.Models.Vehículos
+
+
+@{
+    ViewData["Title"] = "recivirDatosManual";
+}
+
+<h4>Vehículos</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="guardarDatos">
+
+            <div class="form-group">
+                <label asp-for="Placa" class="control-label"></label>
+                <input asp-for="Placa" name="_id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Color" class="control-label"></label>
+                <input type="color" asp-for="Color" name="_color" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Dueño" class="control-label"></label>
+                <input asp-for="Dueño" name="_owner" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="coordLatitud" class="control-label"></label>
+                <input asp-for="coordLatitud" name="_marca" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="coordLongitud" class="control-label"></label>
+                <input asp-for="coordLongitud" name="_serie" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

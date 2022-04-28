@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "recivirDatosArchivo";
+}
+
+<h3>Seleccione su archivo</h3>
+<form asp-controller="Home" asp-action="leerArchivoAVL">
+
+    <div class="form-group">
+        <input type="file" id="dataFile" name="_archivo" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Abrir archivo" class="btn btn-dark" />
+    </div>
+</form>
+<a asp-action="Index">Regresar al menú</a>

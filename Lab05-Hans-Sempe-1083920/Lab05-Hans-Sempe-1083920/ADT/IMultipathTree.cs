@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace Lab05_Hans_Sempe_1083920.ADT
 {
 
@@ -25,12 +26,41 @@ namespace Lab05_Hans_Sempe_1083920.ADT
 
         public V Valor { get; set; }
 
-        public TreeNode<K, V> origen;
+        private TreeNode<K, V> origen;
+
+        private CompareKeysDelegate<K> compare;
 
         public MultiPathTree()
         {
             this.origen = null; 
         }
+
+
+
+
+        public virtual void Add(K llave, V item, CompareKeysDelegate<K> compare)
+        {
+            bool hoja = false;
+
+            int min = 1;
+
+            int max = 3;      
+
+            this.origen = new TreeNode<K, V>(min, max, hoja, compare);
+
+            origen.Insert(llave, item);
+
+        }
+
+
+        public List<V> GetList()
+        {
+            List<V> tempList = new List<V>();
+
+
+            return tempList;
+        }
+
 
     }
 

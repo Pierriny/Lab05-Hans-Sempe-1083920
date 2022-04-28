@@ -4,9 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text;
 
-public delegate K GetKeyDelegate<K, V>(V value);
-
-public delegate int CompareKeysDelegate<K>(K key1, K key2);
 
 namespace Lab05_Hans_Sempe_1083920.ADT
 {

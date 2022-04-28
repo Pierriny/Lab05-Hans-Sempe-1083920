@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+public delegate K GetKeyDelegate<K, V>(V value);
+
+public delegate int CompareKeysDelegate<K>(K key1, K key2);
+
 namespace Lab05_Hans_Sempe_1083920.ADT
 {
     public class TreeNode<K, V>
@@ -22,9 +26,9 @@ namespace Lab05_Hans_Sempe_1083920.ADT
         // min 1 y max 3 para un arbol 2
         public TreeNode(int _minimumDegree, int _maximunDegree, bool _isLeaf, CompareKeysDelegate<K> _KeyComparator)
         {
-            _minimumDegree = 1;
+            //_minimumDegree = 1;
 
-            _maximunDegree = 3;     
+            //_maximunDegree = 3;     
 
             this.keys = new List<K>();
 

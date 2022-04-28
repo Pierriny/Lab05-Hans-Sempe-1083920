@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "mostrarArbol";
+}
+
+<h1>mostrarArbol</h1>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Datos del árbol AVL</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+
+            <table class="table table-bordered table-striped">
+                <tr class="table-success">
+                    <th>Placa</th>
+                    <th>Color</th>
+                    <th>Dueño</th>
+                    <th>Coordenadas (Latitud)</th>
+                    <th>Coordenadas (Longitud)</th>
+                </tr>
+                @foreach (var item in ViewData["vehiculos"] as List<Vehículos>)
+                {
+                    <tr>
+                        <td>@item.Placa</td>
+                        <td>@item.Color</td>
+                        <td>@item.Dueño</td>
+                        <td>@item.coordLatitud</td>
+                        <td>@item.coordLongitud</td>
+
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to Home</a>
+</div>
+
